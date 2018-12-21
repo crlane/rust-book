@@ -1,0 +1,9 @@
+[package]
+name = "rmuxinator"
+version = "0.1.0"
+authors = ["Cameron Lane <crlane@adamanteus.com>"]
+publish = false
+description = "Create and/or reuse tmuxinator-style configuration files with a fast, zero-dependency static binary"
+
+[dependencies]
+clap = "2.29.2"

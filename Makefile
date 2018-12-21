@@ -1,3 +1,5 @@
+IMAGE ?= rust
+TAG ?= 1.30.0
 
-env:
-	@docker run --rm -it -v`pwd`/src:/opt/src -w /opt/src scorpil/rust:1.16 bash
+run:
+	@docker run --rm -it --user $(shell id -u):$(shell id -g) -e USER=${USER} -v`pwd`:/opt/src -w /opt/src ${IMAGE}:${TAG} bash
